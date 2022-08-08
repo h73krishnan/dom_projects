@@ -1,13 +1,31 @@
 document.querySelector("form").addEventListener("submit", todoFunction);
-// todoFunction = () =>{
+
+
+// let arr = JSON.parse(localStorage.getItem("userData")) || [];
+let arr = [];
+let i = 1;
+class storeData{
+    constructor(per, pr1, wor, pr2) {
+        this.per = per;
+        this.pr1 = pr1;
+        this.wor = wor;
+        this.pr2 = pr2;
+    }
+}
+
 function todoFunction(){
-    event.preventDefault();
+    // event.preventDefault();
     let form = document.querySelector("form");
     let perProject = form.personal.value;
     let perPriority = form.priority1.value;
     let workProject = form.work.value;
     let workPriority = form.priority2.value;
 
+    let person1 = new storeData(perProject, perPriority, workProject, workPriority);
+
+    arr.push(person1);
+
+    localStorage.setItem("userData", JSON.stringify(arr));
 
     let row = document.createElement("tr");
     let col1 = document.createElement("td");
@@ -26,5 +44,11 @@ function todoFunction(){
 
     row.append(col1, col2, col3, col4);
     document.getElementById("table").append(row);
+    console.log(i, "times");
+    i++;
+    // if (i =  5){
+    //     localStorage.setItem("userData", JSON.stringify(arr)) = null;
+    //     console.log("done");
+    // }
 
 }

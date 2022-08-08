@@ -1,0 +1,66 @@
+<!-- level 1 -->
+<!-- button in form -->
+<!--  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&family=Roboto&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div id="container-main">
+    <form id="form">
+        <h2>Projects</h2>
+        <label>Personal</label><br/>
+        <select id="personal" placeholder="Personal">
+            <option value="Home">Home</option>
+            <option value="Family">Family</option>
+            <option value="House">House</option>
+        </select> <br/>
+        <label>Priority </label><br />
+        <select id="priority1" placeholder="Priority">
+          <option value="High">High</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+        </select>
+        <br />
+        <label>Work</label><br/>
+        <select id="work" placeholder="Work">
+            <option value="Company portal website">Company portal website</option>
+            <option value="open source project">open source website</option>
+            <option value="Client support website">Client support website</option>
+        </select><br/>
+        <label>Priority </label><br />
+        <select id="priority2">
+          <option value="Urgent">Urgent</option>
+          <option value="Extra time">Extra time 
+          </option>
+          <option value="Not urgent">Not urgent</option>
+        </select>
+        <br />
+        <button onclick="todoFunction()">Submit</button>
+    </form>
+    <table>
+        <thead>
+          <tr>
+            <th>Personal</th>
+            <th>Priority</th>
+            <th>Work</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+    </table>
+   </div>
+</body>
+</html>
+
+<script src="index1.js">
+
+</script>
